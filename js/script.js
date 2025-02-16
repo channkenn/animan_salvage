@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       imgElement.alt = `Image ${i}`;
       imgElement.loading = "lazy";
 
+      // クリック時に別タブで開く
+      imgElement.addEventListener("click", () => {
+        window.open(imgSrc, "_blank");
+      });
+
       const imgWrapper = document.createElement("div");
       imgWrapper.className = "image-panel";
 
